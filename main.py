@@ -34,14 +34,13 @@ def button():
     klass_photo = tkinter.PhotoImage(file="photo/klass.png")
     klass=tkinter.Label(screen,image=klass_photo)
     klass.place(x=0,y=0,width=1042,height = 607)
-    for temp in range(3):
-        random_number= random.randrange(0,9)
-        text = tkinter.Label(screen, text=questions[random_number])
-        text.place(x=60, y=45)
+    random_number= 7#random.randrange(0,9)
+    text = tkinter.Label(screen, text=questionsM1[random_number],wraplength=600,fg="#d9dad9",bg="#5a7250",font=("Impact", 18))
+    text.place(x=60, y=35,width=600,height=60)
     pushbutton_responder1=tkinter.Button(screen,text="25")
     pushbutton_responder1.place(x=200,y=172)
 konopka_button_photo= tkinter.PhotoImage(file="photo/konopka_button.png")
-konopka_button=tkinter.Button(screen,image=konopka_button_photo,borderwidth=0,activebackground="#006400",command=button)
+konopka_button=tkinter.Button(screen,image=konopka_button_photo,borderwidth=0,activebackground="#5a7250",command=button)
 konopka_button.place(x=100,y=88,width = 274,height = 135)
 #Размер- 271 на 134
 
@@ -49,7 +48,7 @@ konopka_button.place(x=100,y=88,width = 274,height = 135)
 def exit():
     screen.destroy()
 konopka_exit_photo= tkinter.PhotoImage(file="photo/konopra_exit.png")
-konopka_exit=tkinter.Button(screen,image=konopka_exit_photo,borderwidth=0,activebackground="#006400",command=exit)
+konopka_exit=tkinter.Button(screen,image=konopka_exit_photo,borderwidth=0,activebackground="#5a7250",command=exit)
 konopka_exit.place(x=475,y=88,width = 274,height = 135)
 
 #
